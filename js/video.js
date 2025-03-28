@@ -55,9 +55,9 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 var slider = document.getElementById("slider");
 var output = document.getElementById("volume");
-output.innerHTML = slider.value + "%";
+output.innerHTML = slider.value/100 + "%";
 slider.oninput = function() {
-  output.innerHTML = this.value + "%";
+  output.innerHTML = this.value /100 + "%";
 }
 slider.addEventListener("input", function() {
 	video.volume = slider.value / 100;
