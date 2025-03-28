@@ -53,6 +53,7 @@ slider.oninput = function() {
   output.innerHTML = this.value + "%";
 }
 slider.addEventListener("input", function() {
+	console.log('current volume is set to '+ video.volume);
 	video.volume = slider.value / 100;
 	console.log('current volume is set to '+ video.volume);
 });
