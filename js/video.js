@@ -13,6 +13,8 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	video.volume = slider.value / 100;
+	output.innerHTML = slider.value + "%";
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -23,6 +25,11 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#mute").addEventListener("click", function() {
 	video.muted = !video.muted;
 	console.log('mute is set to '+ video.muted);
+	if (video.muted) {
+		document.querySelector("#mute").textContent = "Unmute";
+	} else {
+		document.querySelector("#mute").textContent = "Mute";
+	}
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
