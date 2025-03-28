@@ -23,7 +23,6 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#mute").addEventListener("click", function() {
 	video.muted = !video.muted;
 	console.log('mute is set to '+ video.muted);
-	
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
