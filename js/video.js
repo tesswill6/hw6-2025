@@ -24,11 +24,11 @@ document.querySelector("#mute").addEventListener("click", function() {
 	video.muted = !video.muted;
 	console.log('mute is set to '+ video.muted);
 	if (video.muted) {
-		slider.value = 0;
-    	output.innerHTML = 0;
+		slider.value = 0 + "%";
+    	output.innerHTML = 0 + "%";
 	} else {
-		video.volume = slider.value / 100;
-    	output.innerHTML = slider.value;
+		video.volume = slider.value / 100 + "%";
+    	output.innerHTML = slider.value + "%";
 	}
 });
 
