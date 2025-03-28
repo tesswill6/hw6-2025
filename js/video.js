@@ -23,13 +23,7 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#mute").addEventListener("click", function() {
 	video.muted = !video.muted;
 	console.log('mute is set to '+ video.muted);
-	if (video.muted) {
-		slider.value = 0 + "%";
-    	output.innerHTML = 0 + "%";
-	} else {
-		video.volume = slider.value / 100 + "%";
-    	output.innerHTML = slider.value + "%";
-	}
+	
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
@@ -55,9 +49,9 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 var slider = document.getElementById("slider");
 var output = document.getElementById("volume");
-output.innerHTML = slider.value/100 + "%";
+output.innerHTML = slider.value + "%";
 slider.oninput = function() {
-  output.innerHTML = this.value /100 + "%";
+  output.innerHTML = this.value + "%";
 }
 slider.addEventListener("input", function() {
 	video.volume = slider.value / 100;
